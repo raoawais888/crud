@@ -7,7 +7,7 @@ const users = require("./models/userSchema");
 const cors = require("cors");
 const router = require("./routes/router");
 
-const port = process.env.PORT || 8003;
+const port = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
@@ -19,5 +19,5 @@ app.get("/",(req,res)=>{
 app.use(router);
 
 app.listen(port, () => {
-    console.log(`server is start port number ${port}`);
+    console.log(`http://localhost:${port}`);
 });
